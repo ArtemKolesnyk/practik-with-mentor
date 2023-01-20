@@ -1,5 +1,4 @@
 import { useFetchevent } from '../../hooks/usefetchEvent';
-import { EventImg } from 'components/EventSubPage/EventSubPage.styled';
 import { useNavigate } from 'react-router-dom';
 
 const Details = () => {
@@ -12,7 +11,7 @@ const Details = () => {
           Go back
         </button>
         <h2>{event.name} </h2>
-        <EventImg src={event.images[0].url} alt={event.name} />
+        <img src={event.images[0].url} alt={event.name} width={250} />
         <ul>
           <li>Genre: {event.classifications[0].genre.name}</li>
           <li>Subgenre: {event.classifications[0].subGenre.name}</li>
